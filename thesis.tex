@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage{styles/license-style}
+
+% the document should be compiled with pdfLaTex
+
+\begin{document}
+
+% \numberwithin{lstlisting}{section}
+
+\phantomsection
+
+%##############################################################################
+
+\input{abstract/title.tex}
+\cleardoublepage
+
+\input{abstract/abstract_ro.tex}
+\clearpage
+
+\input{abstract/abstract_en.tex}
+\clearpage
+
+\tableofcontents
+  \addtocontents{toc}{\protect\thispagestyle{empty}}
+\cleardoublepage
+
+\listoffigures
+  \addcontentsline{toc}{section}{List of figures}
+\clearpage
+
+\lstlistoflistings
+  \addcontentsline{toc}{section}{Listings}
+  \thispagestyle{empty}
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{section}{Abbreviations}
+\input{abstract/abbreviations.tex}
+\thispagestyle{empty}
+\cleardoublepage
+
+\phantomsection
+\addcontentsline{toc}{section}{Introduction}
+\input{abstract/introduction.tex}
+\cleardoublepage
+
+\input{chapter_1/chapter1.tex}
+\cleardoublepage
+
+\input{chapter_2/chapter2.tex}
+\cleardoublepage
+
+\input{chapter_3/chapter3.tex}
+\cleardoublepage
+
+\input{chapter_4/chapter4.tex}
+\cleardoublepage
+
+\phantomsection
+\addcontentsline{toc}{section}{Conclusions}
+\input{abstract/conclusion.tex}
+\cleardoublepage
+
+\cleardoublepage
+\addcontentsline{toc}{section}{References}
+\input{abstract/bibliography.tex}
+\cleardoublepage
+
+\phantomsection
+
+\end{document}
